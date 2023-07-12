@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 
-import { LoginPage } from '../auth'
-import { CalendarPage } from '../calendar'
+import { LoginPage } from '../auth';
+import { CalendarPage } from '../calendar';
 
 export const AppRouter = () => {
 
