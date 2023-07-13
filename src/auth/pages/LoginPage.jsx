@@ -37,15 +37,11 @@ export const LoginPage = () => {
         startRegister({ name: registerName, email: registerEmail, password: registerPassword });
     }
 
-
     useEffect(() => {
         if (errorMessage != undefined) {
             Swal.fire('Error en la autenticación', errorMessage, 'error');
         }
-
-
     }, [errorMessage])
-
 
     return (
         <div className="container login-container">
