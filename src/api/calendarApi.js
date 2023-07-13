@@ -4,9 +4,22 @@ import { getEnvVariables } from "../helpers";
 const { VITE_API_URL } = getEnvVariables();
 
 const calendarApi = axios.create({
-    baseURL:VITE_API_URL,
+    baseURL: VITE_API_URL,
 });
 
 //TODO Configurar intersectores
+calendarApi.interceptors.request.use(config => {
+
+    config.headers = {
+        ...config.headers,
+        'x-token': localStorage.getItem('token')
+    }
+
+
+    console.log(config);
+    return config;
+}
+
+)
 
 export default calendarApi;
