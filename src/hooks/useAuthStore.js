@@ -78,8 +78,8 @@ export const useAuthStore = () => {
     }
 
     const startLogout = async ({ name, email, password }) => {
-
-        sessionStorage.clear();        
+        
+        localStorage.clear(); 
         dispatch(onLogoutCalendar());
         dispatch(onLogout());
     }
