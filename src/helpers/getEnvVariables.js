@@ -1,8 +1,10 @@
 export const getEnvVariables = () => {
 
-    import.meta.env;
+    //* En caso de error al procesar vite build
+    //import.meta.env;
 
     return {
-        ...import.meta.env
+        //...import.meta.env
+        VITE_API_URL: import.meta.env.import.meta.env,
     }
 }
